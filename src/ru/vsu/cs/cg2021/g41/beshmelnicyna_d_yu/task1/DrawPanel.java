@@ -9,6 +9,7 @@ public class DrawPanel extends JPanel {
 
     public DrawPanel(){
         world = new World(0, 0, 0, 0, Color.CYAN);
+        world.addDrawingObject(new Background(0, 0, 1, 1, new Color(1)));
         world.addDrawingObject(new Sky(0, 0, 1, 1));
         world.addDrawingObject(new Sun(0.3, 0.3, 0.2, new Color(0xFADC03)));
         world.addDrawingObject(new Mushrooms(0.24, 0.886, new Color(0x3A3A3D), new Color(0xA10505)));
