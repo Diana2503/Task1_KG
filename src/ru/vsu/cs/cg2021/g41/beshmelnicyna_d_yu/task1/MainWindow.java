@@ -7,6 +7,7 @@ public class MainWindow extends JFrame {
     public MainWindow()  {
         this.setSize(1000, 700);
         this.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
+        this.setLocationRelativeTo(null);
         this.setTitle("Village");
 
         add(new DrawPanel());
