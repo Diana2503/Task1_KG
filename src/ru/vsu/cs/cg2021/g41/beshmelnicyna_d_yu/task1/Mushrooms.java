@@ -3,8 +3,12 @@ package ru.vsu.cs.cg2021.g41.beshmelnicyna_d_yu.task1;
 import java.awt.*;
 
 public class Mushrooms extends DrawingObject{
-    public Mushrooms(double cofX, double cofY, Color color) {
-        super(cofX, cofY, color);
+    private final Color color1;
+    private final Color color2;
+    public Mushrooms(double cofX, double cofY, Color color1, Color color2) {
+        super(cofX, cofY);
+        this.color1 = color1;
+        this.color2 = color2;
     }
 
     @Override
@@ -13,7 +17,7 @@ public class Mushrooms extends DrawingObject{
         Color oldColor = g.getColor();
 
         g.setStroke(new BasicStroke(25));
-        g.setColor(color);
+        g.setColor(color1);
         g.drawLine((int) (cofX * panelWidth), (int) (cofY * panelHeight), (int) (cofX * panelWidth),
                 (int) (cofY * panelHeight) - width);
 

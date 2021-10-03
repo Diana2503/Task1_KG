@@ -21,6 +21,7 @@ public class Cloud extends DrawingObject{
 
         Color oldColor = g.getColor();
         g.setStroke(new BasicStroke(5));
+
         g.setColor(color1.darker());
         g.drawOval((int) (cofX * panelWidth), (int) (cofY * panelHeight), width, height);
         g.drawOval(((int) ((cofX + 0.06) * panelWidth)), ((int) ((cofY - 0.0286) * panelHeight)), width, height);
@@ -29,6 +30,14 @@ public class Cloud extends DrawingObject{
         g.fillOval((int) (cofX * panelWidth), (int) (cofY * panelHeight), width, height);
         g.fillOval(((int) ((cofX + 0.06) * panelWidth)), ((int) ((cofY - 0.0286) * panelHeight)), width, height);
         g.fillOval(((int) ((cofX + 0.12) * panelWidth)), (int) (cofY * panelHeight), width, height);
+
+
+       /* for(int i = 0; i++; i < 2) {
+            g.drawOval((int) (cofX * panelWidth), (int) (cofY * panelHeight), width, height);
+            g.drawOval(((int) ((cofX + 0.06) * panelWidth)), ((int) ((cofY - 0.0286) * panelHeight)), width, height);
+            g.drawOval(((int) ((cofX + 0.12) * panelWidth)), (int) (cofY * panelHeight), width, height);
+            g.setColor(color1.darker());
+        }*/
 
         g.setColor(color2);
         g.fillArc(((int) ((cofX + 0.08) * panelWidth)), ((int) ((cofY + 0.0286) * panelHeight)),
@@ -70,3 +79,13 @@ public class Cloud extends DrawingObject{
         g.setColor(oldColor);
     }
 }*/
+/*
+        g.setColor(color1.darker());
+                g.drawOval((int) (cofX * panelWidth), (int) (cofY * panelHeight), width, height);
+                g.drawOval(((int) ((cofX + 0.06) * panelWidth)), ((int) ((cofY - 0.0286) * panelHeight)), width, height);
+                g.drawOval(((int) ((cofX + 0.12) * panelWidth)), (int) (cofY * panelHeight), width, height);
+                g.setColor(color1);
+                g.fillOval((int) (cofX * panelWidth), (int) (cofY * panelHeight), width, height);
+                g.fillOval(((int) ((cofX + 0.06) * panelWidth)), ((int) ((cofY - 0.0286) * panelHeight)), width, height);
+                g.fillOval(((int) ((cofX + 0.12) * panelWidth)), (int) (cofY * panelHeight), width, height);
+*/
