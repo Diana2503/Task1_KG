@@ -11,8 +11,5 @@ public class MainWindow extends JFrame {
         this.setTitle("Village");
 
         add(new DrawPanel());
-        //this.setLocationRelativeTo(null);
-        //mainWindow.setEnabled(false);
-
     }
 }

@@ -33,23 +33,6 @@ public abstract class DrawingObject {
         cofH = 0;
     }
 
-    public DrawingObject(double cofX, double cofY, Color color) {
-        this.cofX = cofX;
-        this.cofY = cofY;
-        this.color = color;
-        cofW = 0;
-        cofH = 0;
-
-    }
-
-    public DrawingObject(double cofX, double cofY, double cofH) {
-        this.cofX = cofX;
-        this.cofY = cofY;
-        this.cofH = cofH;
-        color = null;
-        cofW = 0;
-    }
-
     public DrawingObject(double cofX, double cofY) {
         this.cofX = cofX;
         this.cofY = cofY;

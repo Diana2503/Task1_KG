@@ -5,8 +5,9 @@ import java.awt.*;
 import static ru.vsu.cs.cg2021.g41.beshmelnicyna_d_yu.task1.DrawUtil.drawWithColor;
 
 public class Sky extends DrawingObject {
-    public Sky(double cofX, double cofY, double cofW, double cofH) {
-        super(cofX, cofY, cofW, cofH);
+
+    public Sky(double cofX, double cofY, double cofW, double cofH, Color color) {
+        super(cofX, cofY, cofW, cofH, color);
     }
 
     @Override
@@ -19,8 +20,5 @@ public class Sky extends DrawingObject {
                     (int) (cofH * panelHeight)
             );
         });
-
-
     }
-
 }

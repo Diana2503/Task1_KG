@@ -14,10 +14,6 @@ public abstract class CompositionObject extends DrawingObject{
         this.objects.add(drawingObjects);
     }
 
-    public ArrayList<DrawingObject> getObjects() {
-        return objects;
-    }
-
     @Override
     public void draw(Graphics2D g, int panelWidth, int panelHeight) {
         if (objects != null) {
