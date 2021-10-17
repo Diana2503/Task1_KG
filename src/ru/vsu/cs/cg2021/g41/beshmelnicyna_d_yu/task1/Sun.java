@@ -15,19 +15,30 @@ public class Sun extends DrawingObject {
         Color oldColor = g.getColor();
         g.setColor(color);
         g.setStroke(new BasicStroke(4));
-        g.fillOval((int) ((cofX * panelWidth) - (cofW * panelWidth)),
-                (int) ((cofY * panelHeight) - (cofW * panelWidth)),
-                (int) (2 * cofW * panelWidth), (int) (2 * cofW * panelWidth));
+        g.fillOval((int) ((cofX * avg(panelWidth, panelHeight)) - (cofW * avg(panelWidth, panelHeight))),
+                (int) ((cofY * avg(panelWidth, panelHeight)) - (cofW * avg(panelWidth, panelHeight))),
+                (int) (2 * cofW * avg(panelWidth, panelHeight)), (int) (2 * cofW * avg(panelWidth, panelHeight)));
         double da = 2 * Math.PI / n;
 
         for (int i = 0; i < n; i++) {
             double a = i * da;
-            double x1 = cofX + cofW * Math.cos(a);
-            double y1 = cofY + cofW * Math.sin(a);
-            double x2 = cofX + (cofW + l) * Math.cos(a);
-            double y2 = cofY + (cofW + l) * Math.sin(a);
-            g.drawLine((int) (x1 * panelWidth), (int) (y1 * panelHeight), (int) (x2 * panelWidth), (int) (y2 * panelHeight));
+            double x1 = cofX + avg(cofW, cofH) * Math.cos(a);
+            double y1 = cofY + avg(cofW, cofH) * Math.sin(a);
+            double x2 = cofX + (avg(cofW, cofH) + l) * Math.cos(a);
+            double y2 = cofY + (avg(cofW, cofH) + l) * Math.sin(a);
+            g.drawLine((int) (x1 * avg(panelWidth, panelHeight)), (int) (y1 * avg(panelWidth, panelHeight)),
+                    (int) (x2 * avg(panelWidth, panelHeight)), (int) (y2 * avg(panelWidth, panelHeight)));
         }
         g.setColor(oldColor);
+    }
+
+    double avg(double a, double b)
+    {
+        return (a + b) / 2;
+    }
+
+    int avg(int a, int b)
+    {
+        return (a + b) / 2;
     }
 }

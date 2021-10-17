@@ -36,12 +36,11 @@ public class House extends DrawingObject {
         g.fillOval(((int) ((cofX + 0.135) * panelWidth)), ((int) ((cofY + 0.243) * panelHeight)),
                 ((int) ((cofW - 0.23) * panelWidth)), ((int) ((cofH - 0.3286) * panelHeight)));
 
-        Font font = new Font("Arial", Font.BOLD, 30);
+        Font font = new Font("Arial", Font.BOLD, 20);
         g.setFont(font);
         g.setColor(new Color(0xE0CE8A));
-         //g.drawString("Nice to meet you", (int) (((cofX + 0.005) * panelWidth)), (int) (((cofY + 0.08) * panelHeight)));
-        g.drawString("Nice to \r\n meet you", (int) (cofX * panelWidth), (int) ((cofY + .1) * panelHeight));
-
+        g.drawString("Nice to", (int) ((cofX + 0.25 * cofW) * panelWidth), (int) ((cofY + .07) * panelHeight));
+        g.drawString("meet you", (int) ((cofX + 0.25 * cofW) * panelWidth), (int) ((cofY + .07) * panelHeight) + g.getFontMetrics().getHeight());
         g.setColor(oldColor);
     }
 }
