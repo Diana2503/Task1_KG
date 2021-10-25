@@ -9,6 +9,22 @@ public abstract class DrawingObject {
     protected final double cofH;
     protected final Color color;
 
+    public double getCofX() {
+        return cofX;
+    }
+
+    public double getCofY() {
+        return cofY;
+    }
+
+    public double getCofW() {
+        return cofW;
+    }
+
+    public double getCofH() {
+        return cofH;
+    }
+
     public DrawingObject(double cofX, double cofY, double cofW, double cofH, Color color) {
         this.cofX = cofX;
         this.cofY = cofY;
